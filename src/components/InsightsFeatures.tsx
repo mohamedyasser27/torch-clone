@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LayoutGrid, RefreshCw, Sparkles, Users } from "lucide-react";
 
@@ -29,27 +30,81 @@ const features = [
 	},
 ];
 
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.15,
+			delayChildren: 0.2,
+		},
+	},
+};
+
+const cardVariants = {
+	hidden: { opacity: 0, y: 40, scale: 0.95 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		scale: 1,
+		transition: {
+			duration: 0.6,
+		},
+	},
+};
+
+const titleVariants = {
+	hidden: { opacity: 0, y: -20 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			duration: 0.6,
+		},
+	},
+};
+
 export default function InsightsFeatures() {
 	return (
 		<section className="section">
 			<div className="container mx-auto">
-				<h2 className=" text-white mb-8 md:mb-12">
+				<motion.h2
+					className=" text-white mb-8 md:mb-12"
+					variants={titleVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true, amount: 0.3 }}
+				>
 					<span className="text-gradient-overlay">
 						Take action from insights
 					</span>
-				</h2>
-				<div className="flex flex-col md:flex-row gap-6 min-h-[600px]">
+				</motion.h2>
+				<motion.div
+					className="flex flex-col md:flex-row gap-6 min-h-[600px]"
+					variants={containerVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true, amount: 0.2 }}
+				>
 					<div className="flex flex-col gap-6 w-full md:w-1/2">
 						{/* Left column */}
-						<FeatureCard {...features[0]} className=" lg:basis-2/3" />
-						<FeatureCard {...features[2]} className=" lg:basis-1/3" />
+						<motion.div variants={cardVariants}>
+							<FeatureCard {...features[0]} className=" lg:basis-2/3" />
+						</motion.div>
+						<motion.div variants={cardVariants}>
+							<FeatureCard {...features[2]} className=" lg:basis-1/3" />
+						</motion.div>
 					</div>
 					<div className="flex flex-col gap-6 w-full md:w-1/2">
 						{/* Right column */}
-						<FeatureCard {...features[1]} className=" lg:basis-1/3" />
-						<FeatureCard {...features[3]} className=" lg:basis-2/3" />
+						<motion.div variants={cardVariants}>
+							<FeatureCard {...features[1]} className=" lg:basis-1/3" />
+						</motion.div>
+						<motion.div variants={cardVariants}>
+							<FeatureCard {...features[3]} className=" lg:basis-2/3" />
+						</motion.div>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	);
@@ -74,10 +129,16 @@ function FeatureCard({
 			)}
 		>
 			<div>{icon}</div>
-			<div className="flex flex-col gap-4">
+			<motion.div
+				className="flex flex-col gap-4"
+				initial={{ opacity: 0, y: 10 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				transition={{ delay: 0.4 }}
+			>
 				<h3>{title}</h3>
 				<p className="opacity-70">{description}</p>
-			</div>
+			</motion.div>
 		</div>
 	);
 }

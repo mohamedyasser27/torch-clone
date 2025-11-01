@@ -1,8 +1,8 @@
 import { Handshake, Lightbulb, Sliders } from "lucide-react";
 import { Metadata } from "next";
-import Image from "next/image";
 
 import AboutHeroSection from "@/components/AboutHeroSection";
+import AboutImageGallery from "@/components/AboutImageGallery";
 import CTASection from "@/components/CTASection";
 import CustomersSection from "@/components/CustomersSection";
 import FaqSection from "@/components/FaqSection";
@@ -49,35 +49,7 @@ export default function AboutPage() {
 				]}
 			/>
 			<ValuesSection />
-			<section className="section grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 min-h-[700px] container mx-auto">
-				<div className="relative col-span-1 md:col-span-2 md:row-span-2 overflow-hidden rounded-xl">
-					<Image
-						src="/about-image-1.avif"
-						alt="Office workspace"
-						fill
-						priority
-						className="object-cover"
-					/>
-				</div>
-				<div className="relative col-span-1 md:col-span-1 md:row-span-1 overflow-hidden rounded-xl">
-					<Image
-						src="/about-image-2.avif"
-						alt="Team collaboration"
-						fill
-						priority
-						className="object-cover"
-					/>
-				</div>
-				<div className="relative col-span-1 md:col-span-1 md:row-span-1 overflow-hidden rounded-xl">
-					<Image
-						src="/about-image-3.avif"
-						alt="Team meeting and discussion"
-						fill
-						priority
-						className="object-cover"
-					/>
-				</div>
-			</section>
+			<AboutImageGallery />
 			<CustomersSection />
 			<FaqSection />
 			<CTASection />

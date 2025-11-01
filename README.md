@@ -18,6 +18,7 @@ Built to showcase clean architecture, responsive design, SEO optimization, and m
 - 🏠 **Multi-page Layout** with Home, Features, Pricing, About, and Contact pages
 - 🌗 **Dark / Light Mode** with smooth theme transitions
 - 📱 **Fully Responsive** design for all screen sizes
+- 🎬 **Smooth Animations** powered by Framer Motion
 - 🔍 **SEO Optimized** with centralized metadata management
 - ♿ **Accessible Components** built with Radix UI
 - 🎨 **Modern UI** with shadcn/ui component library
@@ -29,6 +30,7 @@ Built to showcase clean architecture, responsive design, SEO optimization, and m
 - **Next.js 15** (App Router + React 19)
 - **TypeScript** (Type safety)
 - **Tailwind CSS v4** (Styling)
+- **Framer Motion** (Animations)
 - **Radix UI + shadcn/ui** (Components)
 - **Lucide React** (Icons)
 - **next-themes** (Theme management)

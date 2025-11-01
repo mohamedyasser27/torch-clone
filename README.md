@@ -1,87 +1,96 @@
 # Torch Landing Page
 
-A modern, responsive landing page for Torch Analytics Platform built with Next.js 15, React 19, TypeScript, and Tailwind CSS.
+A modern **Next.js 15 + React 19** landing page for Torch Analytics Platform.
 
-## Features
+Built to showcase clean architecture, responsive design, SEO optimization, and modern UI components.  
+**Inspired by the [Torch Webflow Template](https://torch-template.webflow.io/)**
 
-- 🚀 **Next.js 15** with App Router
-- ⚛️ **React 19** for optimal performance
-- 🎨 **Tailwind CSS v4** for styling
-- 🌙 **Dark mode** support with theme provider
-- 📱 **Fully responsive** design
-- ♿ **Accessible** components (Radix UI)
-- 🔍 **SEO optimized** with metadata management
-- 📄 **Multiple pages**: Home, Features, Pricing, About, Contact
+![App Screenshot](./screenshots/image.png)
 
-## Tech Stack
+## 🌐 Live Demo
 
-- **Framework**: Next.js 15.2.2
-- **UI Library**: React 19
-- **Styling**: Tailwind CSS 4
-- **UI Components**: Radix UI + shadcn/ui
-- **Icons**: Lucide React
-- **Font**: Switzer Variable
-- **Type Safety**: TypeScript 5
+**🔗 [View Live App](https://torch-clone.vercel.app/)**
 
-## Getting Started
+---
 
-### Prerequisites
+## ✨ Features
 
-- Node.js 18+ or Bun
-- Package manager: npm, yarn, pnpm, or bun
+- 🏠 **Multi-page Layout** with Home, Features, Pricing, About, and Contact pages
+- 🌗 **Dark / Light Mode** with smooth theme transitions
+- 📱 **Fully Responsive** design for all screen sizes
+- 🔍 **SEO Optimized** with centralized metadata management
+- ♿ **Accessible Components** built with Radix UI
+- 🎨 **Modern UI** with shadcn/ui component library
 
-### Installation
+---
 
-1. Clone the repository:
+## 🧱 Tech Stack
+
+- **Next.js 15** (App Router + React 19)
+- **TypeScript** (Type safety)
+- **Tailwind CSS v4** (Styling)
+- **Radix UI + shadcn/ui** (Components)
+- **Lucide React** (Icons)
+- **next-themes** (Theme management)
+
+---
+
+## 🗂️ Project Structure
+
+```text
+src/
+├── app/              # Pages & layouts
+│   ├── about/        # About page
+│   ├── contact/      # Contact page
+│   ├── features/     # Features page
+│   ├── pricing/      # Pricing page
+│   └── page.tsx      # Home page
+├── components/       # UI components
+│   ├── ui/          # shadcn/ui components
+│   └── ...          # Feature components
+└── lib/             # Utilities & constants
+    ├── constants.ts # Site config & metadata
+    └── utils.ts     # Helper functions
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone repo
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/mohamedyasser27/torch-clone
 cd torch
 ```
 
-2. Install dependencies:
+### 2. Install Bun (if not installed)
 
 ```bash
-npm install
-# or
+# macOS / Linux
+curl -fsSL https://bun.sh/install | bash
+
+# Windows
+powershell -c "irm bun.sh/install.ps1 | iex"
+```
+
+### 3. Install dependencies
+
+```bash
 bun install
 ```
 
-3. Run the development server:
+### 4. Run locally
 
 ```bash
-npm run dev
-# or
-bun dev
+bun run dev
+
+Visit http://localhost:3000
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+---
 
-## Project Structure
-
-```text
-torch/
-├── src/
-│   ├── app/              # Next.js app router pages
-│   │   ├── about/        # About page
-│   │   ├── contact/      # Contact page
-│   │   ├── features/     # Features page
-│   │   ├── pricing/      # Pricing page
-│   │   ├── layout.tsx    # Root layout
-│   │   └── page.tsx      # Home page
-│   ├── components/       # React components
-│   │   ├── ui/          # shadcn/ui components
-│   │   └── ...          # Feature components
-│   └── lib/             # Utility functions & constants
-│       ├── constants.ts # Site configuration & metadata helpers
-│       └── utils.ts     # Utility functions
-├── public/              # Static assets
-└── ...
-```
-
-## Configuration
-
-### Site Configuration
+## 📝 Configuration
 
 Edit `src/lib/constants.ts` to customize:
 
@@ -90,57 +99,25 @@ Edit `src/lib/constants.ts` to customize:
 - Image assets URLs
 - Metadata defaults
 
-### Styling
+---
 
-The project uses Tailwind CSS v4 with custom utilities defined in `src/app/globals.css`. Theme colors and design tokens can be modified in the CSS custom properties.
-
-## Build
-
-Build the production version:
+## 🏗️ Build
 
 ```bash
-npm run build
-# or
 bun run build
-```
-
-Start the production server:
-
-```bash
-npm start
-# or
 bun start
 ```
 
-## Code Quality
+---
 
-- **ESLint**: Configured with Next.js and TypeScript rules
-- **TypeScript**: Strict mode enabled
-- **Prettier**: Integrated with ESLint
-
-Run linting:
-
-```bash
-npm run lint
-# or
-bun run lint
-```
-
-## Deployment
-
-This project can be deployed on:
-
-- **Vercel** (recommended for Next.js)
-- **Netlify**
-- **Any platform** supporting Next.js
-
-See [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## License
+## 📄 License
 
 This project is private and proprietary.
 
-## Credits
+---
 
-Design inspired by modern SaaS landing pages. Built with love using Next.js and React.
+## 🙏 Credits
+
+Design inspired by the [Torch Webflow Template](https://torch-template.webflow.io/) by Bryn Taylor.  
+Built with ❤️ using Next.js and React.
 
